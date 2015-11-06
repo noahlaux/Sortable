@@ -34,7 +34,7 @@
       scroll            : {}
     },
 
-    created() {
+    created: function() {
       // override default DOM property behavior
       Object.defineProperties(this, {
         draggable: { get() { return this._draggable || this.getAttribute("draggable") || ">*"}, set(value) { this._draggable = value; this.draggableChanged(value)} },
