@@ -37,8 +37,8 @@
     created: function() {
       // override default DOM property behavior
       Object.defineProperties(this, {
-        draggable: { get: function () { return this._draggable || this.getAttribute("draggable") || ">*"}, set(value) { this._draggable = value; this.draggableChanged(value)} },
-        scroll: { get: function () { return this._scroll || JSON.parse(this.getAttribute("scroll") || "true") }, set(value) { this._scroll = value; this.scrollChanged(value)} }
+        draggable: { get: function() { return this._draggable || this.getAttribute("draggable") || ">*"}, set: function(value) { this._draggable = value; this.draggableChanged(value)} },
+        scroll: { get: function() { return this._scroll || JSON.parse(this.getAttribute("scroll") || "true") }, set: function(value) { this._scroll = value; this.scrollChanged(value)} }
       })
     },
 
